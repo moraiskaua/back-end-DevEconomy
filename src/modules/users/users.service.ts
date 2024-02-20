@@ -4,4 +4,8 @@ import { UsersRepository } from 'src/shared/database/users.repositories';
 @Injectable()
 export class UsersService {
   constructor(private readonly usersRepo: UsersRepository) {}
+
+  async getUserById(userId: string) {
+    return { userId };
+  }
 }

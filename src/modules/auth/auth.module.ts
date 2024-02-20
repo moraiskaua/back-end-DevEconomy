@@ -11,6 +11,7 @@ import { env } from 'src/shared/config/env';
     JwtModule.register({
       signOptions: { expiresIn: '5d' },
       secret: env.jwtSecret,
+      global: true,
     }),
   ],
   controllers: [AuthController],
