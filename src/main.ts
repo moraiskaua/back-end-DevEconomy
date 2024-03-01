@@ -7,7 +7,9 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe());
   app.enableCors({
-    origin: process.env.FRONT_END_URL,
+    origin: 'https://dev-economy.vercel.app',
+    credentials: true,
+    methods: ['GET', 'HEAD', 'PUT', 'POST', 'DELETE'],
   });
 
   await app.listen(8080);
